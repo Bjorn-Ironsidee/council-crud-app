@@ -1,1 +1,15 @@
-<p>dashboard works!</p>
+<div>
+  <h1>Dashboard</h1>
+
+  <div>
+    <h2>Councils</h2>
+    <ul>
+      <li *ngFor="let council of councils">
+        {{ council.name }}
+        <button (click)="goToRegulationManagement(council.id)">Manage Regulations</button>
+      </li>
+    </ul>
+  </div>
+
+  <button (click)="goToCouncilManagement()">Manage Councils</button>
+</div>
